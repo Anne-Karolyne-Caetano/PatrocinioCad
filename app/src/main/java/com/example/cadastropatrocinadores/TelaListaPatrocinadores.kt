@@ -90,7 +90,7 @@ fun TelaListaPatrocinadores(onVoltar: () -> Unit = {}) {
                                 Text("Nome: ${p.nome}", fontSize = 18.sp)
                                 Text("CNPJ: ${p.cnpj}", fontSize = 16.sp)
                                 Text("Contato: ${p.contato}", fontSize = 16.sp)
-                                Text("Valor: ${p.valor}", fontSize = 16.sp)
+                                Text("Valor: R$${p.valor.toDouble()}", fontSize = 16.sp)
                                 Text("Competiçãp: ${p.competicao}", fontSize = 16.sp)
 
                                 IconButton(

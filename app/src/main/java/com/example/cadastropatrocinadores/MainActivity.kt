@@ -13,15 +13,12 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Deixa o conteúdo sob a barra de status
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.statusBarColor = Color(0xFFCA5A0C).toArgb()
 
         setContent {
-            // Estado que controla qual tela está ativa
             var telaAtual by remember { mutableStateOf("cadastro") }
 
-            // Troca de telas
             when (telaAtual) {
                 "cadastro" -> TelaCadastro(
                     onVerCadastrados = { telaAtual = "lista" } // 👉 vai para a lista
